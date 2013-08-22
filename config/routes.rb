@@ -1,5 +1,9 @@
 Heroappr1::Application.routes.draw do
+  get "home/index"
   get "welcome/index"
+  post "welcome/login"
+  get "welcome/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,7 +11,9 @@ Heroappr1::Application.routes.draw do
   # root 'welcome#index'
 
   root 'welcome#index'
-  
+
+  resources :users
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
