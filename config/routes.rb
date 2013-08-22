@@ -12,7 +12,10 @@ Heroappr1::Application.routes.draw do
 
   root 'welcome#index'
 
-  resources :users
+
+  namespace :apps do
+    resources :realtimes
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

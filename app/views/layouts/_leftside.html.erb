@@ -6,38 +6,39 @@
       <% else %>
     <li>
     <% end %>
-      <a href="/home"> <i class="icon-home"></i> Home </a>
+        <%= link_to home_path do %><i class="icon-home"></i> <%= I18n.t 'menu_home'%> <% end %>
     </li>
 
-    <li class="nav-header active"> App</li>
+    <li class="nav-header active"> Message</li>
     <% if leftmenu == 'project' %>
         <li class="active">
     <% else %>
         <li>
     <% end %>
-      <!--<a href="/projects/index"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a>-->
-      <%= link_to  do%> <i class="icon-fixed-width icon-briefcase"></i> Projects<% end%>
+      <!-- <a href="/realtime/index"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a> -->
+       <%= link_to apps_realtimes_path do %> <i class="icon-fixed-width icon-briefcase"></i> <%= I18n.t 'menu_message'%> <% end %>
     </li>
+
     <% if leftmenu == 'bugs' %>
         <li class="active">
     <% else %>
         <li>
     <% end %>
-      <a href="/heroapp/html/bug/bug.html"> <i class="icon-fixed-width icon-bug"></i> Bugs</a>
+      <a href="/heroapp/html/bug/bug.html"> <i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_eventsend'%></a>
     </li>
-    <li class="nav-header active"> Auth</li>
+    <li class="nav-header active"> Auto</li>
     <li>
-      <a href="/app/continent/"> <i class="icon-fixed-width icon-laptop"></i> Role</a>
-    </li>
-    <li>
-      <a href="/app/continent/"> <i class="icon-fixed-width icon-lock"></i> Permissions</a>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-laptop"></i> <%= I18n.t 'menu_contact'%></a>
     </li>
     <li>
-      <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> Users</a>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-lock"></i> <%= I18n.t 'menu_material'%></a>
+    </li>
+    <li>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> <%= I18n.t 'menu_autoreplay'%></a>
     </li>
     <li class="nav-header active"> System</li>
     <li>
-      <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> <%= I18n.t 'menu_config'%></a>
     </li>
   </ul>
 
@@ -45,32 +46,46 @@
     <li class="app_menu">
       <a href="#"><i class="icon-fixed-width icon-home"></i></a>
     </li>
+
     <li class="app_menu">
       <a class="section dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="icon-fixed-width icon-bug"></i>
+        <i class="icon-fixed-width icon-comments-alt"></i>
       </a>
+
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
         <li>
-          <%= link_to  do%> <i class="icon-fixed-width icon-briefcase"></i> Projects <%end%>
+          <%= link_to  do%> <i class="icon-fixed-width icon-briefcase"></i> <%= I18n.t 'menu_message'%> <%end%>
         </li>
         <li>
-          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> Bugs </a>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_eventsend'%> </a>
         </li>
       </ul>
     </li>
+
     <li class="app_menu">
       <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
-        <i class="icon-fixed-width icon-cog"></i>
+        <i class="icon-fixed-width icon-cloud-download"></i>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_contact'%> </a>
+        </li>
+        <li>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_material'%> </a>
+        </li>
+        <li>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_autoreplay'%> </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="app_menu">
+      <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
+        <i class="icon-fixed-width icon-cogs"></i>
       </a>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
         <li>
-          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-file"></i> Profile</a>
-        </li>
-        <li>
-          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-user"></i> Users</a>
-        </li>
-        <li>
-          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_config'%> </a>
         </li>
       </ul>
     </li>

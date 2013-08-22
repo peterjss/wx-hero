@@ -1,10 +1,13 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'mysql2'
+
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg'  , group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
