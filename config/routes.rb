@@ -1,5 +1,5 @@
 Heroappr1::Application.routes.draw do
-  get "home/index"
+  get "home", to:"home#index"
   get "welcome/index"
   post "welcome/login"
   get "welcome/index"
