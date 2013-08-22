@@ -35,6 +35,13 @@ Heroappr1::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
+  # config.assets.precompile += ['apps/main.js', 'apps/page.form.js','apps/page.list.js','apps/plugin.actions.js']
+  # config.assets.precompile += ['apps/plugin.details.js', 'apps/plugin.editable.js','apps/plugin.portal.js','apps/responsive.js']
+  # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
+  # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
+  config.assets.precompile += ['site.js']
+  config.assets.precompile += ['site.css']
+
   # config.assets.precompile += ['jquery.js', '.css']
 
   # Specifies the header that your server uses for sending files.
