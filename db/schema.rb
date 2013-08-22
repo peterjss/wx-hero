@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130822020222) do
+ActiveRecord::Schema.define(version: 20130822124501) do
+
+  create_table "messages", force: true do |t|
+    t.string   "toUserName"
+    t.string   "fromUserName"
+    t.string   "createTime"
+    t.string   "msgType"
+    t.string   "content"
+    t.string   "musicUrl"
+    t.string   "hqMusicUrl"
+    t.string   "articleCount"
+    t.string   "articles"
+    t.string   "title"
+    t.string   "description"
+    t.string   "picUrrl"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "receivemsgs", force: true do |t|
+    t.string   "toUserName"
+    t.string   "fromUserName"
+    t.string   "createTime"
+    t.string   "msgType"
+    t.string   "content"
+    t.string   "msgId"
+    t.string   "picUrl"
+    t.string   "locationx"
+    t.string   "locationy"
+    t.string   "scale"
+    t.string   "label"
+    t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username"

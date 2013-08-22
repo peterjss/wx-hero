@@ -15,13 +15,20 @@
 # gem 'pg'
 #
 development:
-  adapter: postgresql
-  encoding: utf-8
-  database: heroappr1_development
+  # adapter: postgresql
+  # encoding: utf-8
+  # database: heroappr1_development
+  # pool: 5
+  # username: sa
+  # password: root
+  # host: localhost
+  adapter: mysql2
+  encoding: utf8
+  database: wx-hero_development
   pool: 5
-  username: sa
+  username: root
   password: root
-  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -45,18 +52,25 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: postgresql
-  encoding: utf-8
-  database: heroappr1_test
+  # adapter: mysql2
+  # encoding: utf-8
+  # database: wx-hero_test
+  # pool: 5
+  # username: sa
+  # password: root
+  # host: localhost
+  adapter: mysql2
+  encoding: utf8
+  database: wx-hero_text
   pool: 5
-  username: sa
+  username: root
   password: root
-  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: heroappr1_production
+  database: wx-hero_production
   pool: 5
-  username: heroappr1
+  username: wx-hero
   password:
