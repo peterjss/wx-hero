@@ -1,1 +1,6 @@
-//= require_tree ./apps/css
+//= require bootstrap/css/bootstrap.css
+//= require font-awesome/css/font-awesome
+//= require apps/css/main
+//= require apps/css/responsive
+//= require apps/css/plugins
+//= require apps/css/form

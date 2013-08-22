@@ -39,8 +39,10 @@ Heroappr1::Application.configure do
   # config.assets.precompile += ['apps/plugin.details.js', 'apps/plugin.editable.js','apps/plugin.portal.js','apps/responsive.js']
   # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
   # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
-  config.assets.precompile += ['site.js']
+  config.assets.precompile += ['site.js','combody.js']
   config.assets.precompile += ['site.css']
+
+  # config.assets.precompile += ['site.css']
 
   # config.assets.precompile += ['jquery.js', '.css']
 
