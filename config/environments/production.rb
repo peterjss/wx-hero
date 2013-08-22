@@ -40,7 +40,7 @@ Heroappr1::Application.configure do
   # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
   # config.assets.precompile += ['bootstrap/js/bootstrap.js', 'jquery/js/jquery.js']
   config.assets.precompile += ['site.js','combody.js']
-  config.assets.precompile += ['site.css','font-awesome/css/*','font-awesome/font/*']
+  config.assets.precompile += ['site.css','font-awesome/css/*']
   
   # config.assets.precompile += ['site.css']
 
