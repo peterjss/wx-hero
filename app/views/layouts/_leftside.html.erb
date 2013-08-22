@@ -1,0 +1,78 @@
+<div id="left-side" class="col col-sm-1 col-md-2 col-lg-2">
+
+  <ul class="well nav nav-pills nav-stacked nav-sitemenu hidden-sm">
+    <% if leftmenu == 'home' %>
+    <li class="active">
+      <% else %>
+    <li>
+    <% end %>
+      <a href="/home"> <i class="icon-home"></i> Home </a>
+    </li>
+
+    <li class="nav-header active"> App</li>
+    <% if leftmenu == 'project' %>
+        <li class="active">
+    <% else %>
+        <li>
+    <% end %>
+      <!--<a href="/projects/index"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a>-->
+      <%= link_to  do%> <i class="icon-fixed-width icon-briefcase"></i> Projects<% end%>
+    </li>
+    <% if leftmenu == 'bugs' %>
+        <li class="active">
+    <% else %>
+        <li>
+    <% end %>
+      <a href="/heroapp/html/bug/bug.html"> <i class="icon-fixed-width icon-bug"></i> Bugs</a>
+    </li>
+    <li class="nav-header active"> Auth</li>
+    <li>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-laptop"></i> Role</a>
+    </li>
+    <li>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-lock"></i> Permissions</a>
+    </li>
+    <li>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> Users</a>
+    </li>
+    <li class="nav-header active"> System</li>
+    <li>
+      <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+    </li>
+  </ul>
+
+  <ul class="well nav nav-pills nav-stacked nav-sitemenu visible-sm">
+    <li class="app_menu">
+      <a href="#"><i class="icon-fixed-width icon-home"></i></a>
+    </li>
+    <li class="app_menu">
+      <a class="section dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="icon-fixed-width icon-bug"></i>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li>
+          <%= link_to  do%> <i class="icon-fixed-width icon-briefcase"></i> Projects <%end%>
+        </li>
+        <li>
+          <a href="/app/module/"><i class="icon-fixed-width icon-bug"></i> Bugs </a>
+        </li>
+      </ul>
+    </li>
+    <li class="app_menu">
+      <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
+        <i class="icon-fixed-width icon-cog"></i>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li>
+          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-file"></i> Profile</a>
+        </li>
+        <li>
+          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-user"></i> Users</a>
+        </li>
+        <li>
+          <a href="/app/kitchensink/"><i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
