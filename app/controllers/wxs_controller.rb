@@ -10,7 +10,10 @@ class WxsController < ApplicationController
 
   def reply_text
     puts 'in reply text.'
-    #puts params[:xml][:MsgType]
+    puts params[:xml][:MsgType]
+    puts params[:xml][:FromUserName]
+    puts params[:xml][:ToUserName]
+    puts params[:xml][:Content]
       render "echo"
   end
 
