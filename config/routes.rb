@@ -20,14 +20,22 @@ Heroappr1::Application.routes.draw do
 
   get "wxs/io",  to: "wxs#auth"
 
+  scope path: "/", via: :post, defaults: { format: 'xml'} do
+    match 'wxs/io', to: 'wxs#reply_text', constraints: Weixin::Router.new(type: "text")
+
+    #root :to => 'wxs/io/wxs#reply_text', :constraints => Weixin::Router.new(type: "text", content: "Hello2BizUser")
+    #root :to => 'weixin/staffs#show', :constraints => Weixin::Router.new(:type => "text", :content => /^@/)
+    #root :to => 'weixin/staff_photos#update', :constraints => Weixin::Router.new(:type => "text", :content=>/^#photo /)
+    #root :to => 'weixin/staffs#index', :constraints => Weixin::Router.new(:type => "text")
+    #root :to => 'weixin/staff_photos#create', :constraints => Weixin::Router.new(:type => "image")
+  end
+
   #post 'wxs/io', to: 'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? && request.params[:xml][:MsgType] == 'text' }
   #get 'wxs/io', to:  'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? }
-  scope path: '/', via: :post do
-    #match 'wxs/io', to:  'wxs#reply_text', constraints: Weixin::Router.new("text")
+  #scope path: '/', via: :post do
+    #match 'wxs/io', to:  'wxs#reply_text'
     #match 'wxs/io', to:  'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? }
-    match 'wxs/io', to:  'wxs#reply_text'
-
-    #match "wxs/io", to: "wxs#reply_image", constraints: lambda {|request| request.params[:xml] && request.params[:xml][:MsgType] == "text"}
+    #match "wxs/io", to: "wxs#reply_text", constraints: lambda {|request| request.params[:xml] && request.params[:xml][:MsgType] == "text"}
 
     #match "message/io" => "message#reply_text", constraints: Weixin::Router.new("text")
     #match "message/io" => "message#reply_image", constraints: Weixin::Router.new("image")
@@ -37,7 +45,7 @@ Heroappr1::Application.routes.draw do
     #match "message/io" => "message#reply_music", constraints: Weixin::Router.new("music")
     #match "message/io" => "message#reply_news", constraints: Weixin::Router.new("news")
     #match "message/io" => "message#reply_news", constraints: lambda {|r| r.params}
-  end
+  #end
 
 
   # Example of regular route:
