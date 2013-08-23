@@ -10,6 +10,9 @@ class WxsController < ApplicationController
 
   def reply_text
     puts 'in reply text.'
+    if params[:xml].nil?
+      render "echo", formats: :xml
+    end
     #if params[:xml][:MsgType] == "text"
       render "echo", :formats => :xml
     #end
