@@ -10,11 +10,14 @@ class WxsController < ApplicationController
 
   def reply_text
     puts 'in reply text.'
-    puts params[:xml][:MsgType]
-    puts params[:xml][:FromUserName]
-    puts params[:xml][:ToUserName]
-    puts params[:xml][:Content]
-      render "echo"
+
+    puts weixin_xml.type
+    puts weixin_xml.from_user
+    puts weixin_xml.to_user
+    puts weixin_xml.content
+    #puts params[:xml][:ToUserName]
+    #puts params[:xml][:Content]
+    #  render "reply_text"
   end
 
   private
