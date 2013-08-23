@@ -15,6 +15,8 @@ class WxsController < ApplicationController
     puts weixin_xml.from_user
     puts weixin_xml.to_user
     puts weixin_xml.content
+    status("200")
+
     #puts params[:xml][:ToUserName]
     #puts params[:xml][:Content]
     #  render "reply_text"
