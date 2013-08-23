@@ -37,6 +37,10 @@ end
 
 gem 'rails_12factor', group: :production
 
+
+gem 'actionpack-xml_parser'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

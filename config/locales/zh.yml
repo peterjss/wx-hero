@@ -29,3 +29,18 @@ zh:
   menu_material: "素材管理"
   menu_config: "系统设置"
   menu_autoreplay: "自动回复"
+
+  global_bookmark: "书签"
+  global_bookmark_no: "未发现无书签"
+  global_bookmark_new: "新增书签"
+  global_result_empty: "未找到数据"
+  global_export: "导出"
+  global_export_excel: "导出 Excel"
+  global_export_csv: "导出 CSV"
+  global_export_xml: "导出 XML"
+  global_export_json: "导出 JSON"
+
+  realtime_title: "条消息"
+  realtime_breadcrumb_title: "实时消息"
+  realtime_toolbar_title: "实时消息"
+  realtime_toolbar_add: "创建消息"

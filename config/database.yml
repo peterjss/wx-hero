@@ -54,7 +54,7 @@ development:
 test:
   # adapter: mysql2
   # encoding: utf-8
-  # database: wx-hero_test
+  # database: wxs-hero_test
   # pool: 5
   # username: sa
   # password: root
@@ -69,8 +69,8 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: wx-hero_production
+  encoding: utf8
+  database: wxs-hero_production
   pool: 5
-  username: wx-hero
+  username: wxs-hero
   password:

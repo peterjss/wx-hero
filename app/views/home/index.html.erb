@@ -6,7 +6,7 @@
 
 <div id="body-content" class="row" style="margin-left:0;margin-right: 0;">
 
-  <%= render partial: 'layouts/leftside', locals:{leftmenu: 'home'}%>
+  <%= render partial: 'layouts/leftside', locals:{leftmenu: '/'+ params[:controller] }%>
 
   <div id="content-block" class="col col-xs-12 col-sm-11 col-md-10  col-lg-10">
     <div class="navbar content-navbar" data-class-lg="navbar content-navbar"

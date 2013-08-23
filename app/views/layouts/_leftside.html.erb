@@ -1,7 +1,7 @@
 <div id="left-side" class="col col-sm-1 col-md-2 col-lg-2">
 
   <ul class="well nav nav-pills nav-stacked nav-sitemenu hidden-sm">
-    <% if leftmenu == 'home' %>
+    <% if leftmenu == home_path %>
     <li class="active">
       <% else %>
     <li>
@@ -9,35 +9,27 @@
         <%= link_to home_path do %><i class="icon-home"></i> <%= I18n.t 'menu_home'%> <% end %>
     </li>
 
-    <li class="nav-header active"> Message</li>
-    <% if leftmenu == 'project' %>
-        <li class="active">
-    <% else %>
-        <li>
-    <% end %>
+    <li class="nav-header active"> Message </li>
+    <li <%= leftmenu == apps_realtimes_path ? 'class=active' : '' %> >
       <!-- <a href="/realtime/index"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a> -->
-       <%= link_to apps_realtimes_path do %> <i class="icon-fixed-width icon-briefcase"></i> <%= I18n.t 'menu_message'%> <% end %>
+       <%= link_to apps_realtimes_path do %> <i class="icon-fixed-width icon-briefcase"></i> <%= I18n.t 'menu_message'%>
+       <% end %>
     </li>
-
-    <% if leftmenu == 'bugs' %>
-        <li class="active">
-    <% else %>
-        <li>
-    <% end %>
+    <li <%= leftmenu == '' ? 'class=active' : '' %> >
       <a href="/heroapp/html/bug/bug.html"> <i class="icon-fixed-width icon-bug"></i> <%= I18n.t 'menu_eventsend'%></a>
     </li>
     <li class="nav-header active"> Auto</li>
-    <li>
+    <li <%= leftmenu == ''? 'class=active' : '' %> >
       <a href="/app/continent/"> <i class="icon-fixed-width icon-laptop"></i> <%= I18n.t 'menu_contact'%></a>
     </li>
-    <li>
+    <li <%= leftmenu == '' ? 'class=active' : '' %> >
       <a href="/app/continent/"> <i class="icon-fixed-width icon-lock"></i> <%= I18n.t 'menu_material'%></a>
     </li>
-    <li>
+    <li <%= leftmenu == '' ? 'class=active' : '' %> >
       <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> <%= I18n.t 'menu_autoreplay'%></a>
     </li>
     <li class="nav-header active"> System</li>
-    <li>
+    <li <%= leftmenu == ''? 'class=active' : '' %> >
       <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> <%= I18n.t 'menu_config'%></a>
     </li>
   </ul>

@@ -12,10 +12,27 @@ Heroappr1::Application.routes.draw do
 
   root 'welcome#index'
 
-
   namespace :apps do
     resources :realtimes
   end
+
+  #resources :messages
+
+  get "wxs/io",  to: "wxs#auth"
+  scope path: '/', via: :post do
+    match "wxs/io", to:  "wxs#reply_text", constraints: lambda {|request| request.params[:xml].nil? }
+    #match "wxs/io", to: "wxs#reply_image", constraints: lambda {|request| request.params[:xml] && request.params[:xml][:MsgType] == "text"}
+
+    #match "message/io" => "message#reply_text", constraints: Weixin::Router.new("text")
+    #match "message/io" => "message#reply_image", constraints: Weixin::Router.new("image")
+    #match "message/io" => "message#reply_location", constraints: Weixin::Router.new("location")
+    #match "message/io" => "message#reply_link", constraints: Weixin::Router.new("link")
+    #match "message/io" => "message#reply_event", constraints: Weixin::Router.new("event")
+    #match "message/io" => "message#reply_music", constraints: Weixin::Router.new("music")
+    #match "message/io" => "message#reply_news", constraints: Weixin::Router.new("news")
+    #match "message/io" => "message#reply_news", constraints: lambda {|r| r.params}
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
