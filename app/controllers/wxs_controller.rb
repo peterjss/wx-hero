@@ -5,6 +5,7 @@ class WxsController < ApplicationController
 
   def auth
     puts 'in auth method.'
+    render :text => params[:echostr]
   end
 
   def reply_text
