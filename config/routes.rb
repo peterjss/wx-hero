@@ -23,7 +23,8 @@ Heroappr1::Application.routes.draw do
   #post 'wxs/io', to: 'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? && request.params[:xml][:MsgType] == 'text' }
 
   scope path: '/', via: :post do
-  #  match 'wxs/io', to:  'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? }
+    #match 'wxs/io', to:  'wxs#reply_text', constraints: Weixin::Router.new("text")
+    match 'wxs/io', to:  'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? }
     match 'wxs/io', to:  'wxs#reply_text', constraints: lambda {|request| request.params[:xml].nil? && request.params[:xml][:MsgType] == 'text'}
 
     #match "wxs/io", to: "wxs#reply_image", constraints: lambda {|request| request.params[:xml] && request.params[:xml][:MsgType] == "text"}

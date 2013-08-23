@@ -10,9 +10,8 @@ class WxsController < ApplicationController
 
   def reply_text
     puts 'in reply text.'
-    if params[:xml].nil?
-      render "echo", formats: :xml
-    end
+    puts params[:xml]
+
     #if params[:xml][:MsgType] == "text"
       render "echo", :formats => :xml
     #end
@@ -25,8 +24,6 @@ class WxsController < ApplicationController
       array = [Rails.configuration.weixin_token, params[:timestamp], params[:nonce]].sort
       puts Digest::SHA1.hexdigest(array.join)
       render text: "Forbidden", status: 403 if params[:signature] != Digest::SHA1.hexdigest(array.join)
-    else
-      render text: "Forbidden1", status: 403
     end
 
     #array = [Rails.configuration.weixin_token, params[:timestamp], params[:nonce]].sort
