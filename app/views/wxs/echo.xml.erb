@@ -1,8 +1,8 @@
 <xml>
-    <ToUserName><%= @from_user_name %></ToUserName>
-    <FromUserName><![CDATA[<%= @to_user_name %>]]></FromUserName>
+    <ToUserName><![CDATA[ <%= params[:xml][:ToUserName] %> ]]></ToUserName>
+    <FromUserName><![CDATA[<%= params[:xml][:FromUserName] %>]]></FromUserName>
     <CreateTime><%= Time.now.to_i %></CreateTime>
     <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[大山的回声：<%= @content %>]]></Content>
+    <Content><![CDATA[你是说：<%= @content %>？]]></Content>
     <FuncFlag>0</FuncFlag>
 </xml>
